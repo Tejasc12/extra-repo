@@ -14,6 +14,7 @@ import Team from "@/pages/Team";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 import About from "@/pages/About";
+import Projects from "@/pages/Projects"; // Add this import
 
 function AppRouter() {
   const [location] = useLocation();
@@ -55,6 +56,12 @@ function AppRouter() {
                   {() => {
                     console.log("Rendering Contact");
                     return <Contact />;
+                  }}
+                </Route>
+                <Route path="/projects">
+                  {() => {
+                    console.log("Rendering Projects");
+                    return <Projects />;
                   }}
                 </Route>
                 <Route>
